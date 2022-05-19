@@ -1,6 +1,6 @@
-import React from 'react';
-import StudentList from './components/StudentList';
-import ClassInfo from './components/ClassInfo';
+import React from "react";
+import StudentList from "./components/StudentList";
+import ClassInfo from "./components/ClassInfo";
 
 function App() {
   return (
