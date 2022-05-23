@@ -3,9 +3,9 @@ import "./StudentList.css";
 import PropTypes from "prop-types";
 
 const StudentList = (props) => {
-  const studentComponents = props.students.map((student) => {
+  const studentComponents = props.students.map((student, index) => {
     return (
-      <li>
+      <li key={index}>
         <Student name={student.nameData} email={student.emailData}></Student>
       </li>
     );
