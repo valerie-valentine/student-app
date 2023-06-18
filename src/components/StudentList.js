@@ -1,28 +1,12 @@
 import React from 'react';
 import './StudentList.css';
 import Student from './Student';
-
-
-const studentData = [
-    {
-        nameData: 'Ada',
-        emailData: 'ada@dev.org'
-    },
-    {
-        nameData: 'Soo-ah',
-        emailData: 'sooah@dev.org'
-    },
-    {
-        nameData: 'Chrissy',
-        emailData: 'chrissy@dev.org'
-    }
-]
+import PropTypes from 'prop-types';
 
 
 
-const StudentList = () => {
+const StudentList = ({ studentData }) => {
   const componentClass = 'student-list'
-
   const studentComponents = studentData.map((student) => {
     return (
         <li key={student.emailData}>
@@ -39,5 +23,12 @@ const StudentList = () => {
     </section>
   );
 };
+
+StudentList.propTypes = {
+  studentData: PropTypes.arrayOf(PropTypes.shape({
+    nameData: PropTypes.string.isRequired,
+    emailData: PropTypes.string.isRequired,
+  })).isRequired,
+}
 
 export default StudentList;

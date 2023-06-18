@@ -1,14 +1,32 @@
 import StudentList from './components/StudentList';
 import ClassInfo from './components/ClassInfo';
-// import './App.css';
 
+const studentData = [
+  {
+      nameData: 'Ada',
+      emailData: 'ada@dev.org'
+  },
+  {
+      nameData: 'Soo-ah',
+      emailData: 'sooah@dev.org'
+  },
+  {
+      nameData: 'Chrissy',
+      emailData: 'chrissy@dev.org'
+  },
+  {
+    nameData: 'Charles',
+    emailData: 'charles@incharge.com',
+  },
+];
 
-function App() {
+const App = () => {
+
   return (
     <main>
       <h1>Attendance</h1>
-      <ClassInfo/>
-      <StudentList/>
+      <ClassInfo memberCount={studentData.length}/>
+      <StudentList studentData={studentData}/>
     </main>
   );
 }
